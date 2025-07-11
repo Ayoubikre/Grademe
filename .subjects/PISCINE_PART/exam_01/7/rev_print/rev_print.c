@@ -3,29 +3,41 @@
 /*                                                        :::      ::::::::   */
 /*   rev_print.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: galpers <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: angavrel <angavrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/06 15:18:11 by galpers           #+#    #+#             */
-/*   Updated: 2022/04/06 15:25:22 by galpers          ###   ########.fr       */
+/*   Created: 2016/12/27 10:47:34 by angavrel          #+#    #+#             */
+/*   Updated: 2017/07/14 15:38:39 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	main(int ac, char **av)
+void	ft_putchar(char c)
 {
-	int	i;
+	write(1, &c, 1);
+}
+
+
+int		ft_strlen(char *s)
+{
+	int i;
 
 	i = 0;
+	while (s[i])
+		i++;
+	return (i);
+}
+
+
+int		main(int ac, char **av)
+{
+	int len;
+
 	if (ac == 2)
 	{
-		while(av[1][i] != '\0')
-			i++;
-		while (i >= 1)
-		{
-			write(1, &av[1][i - 1], 1);
-			i--;
-		}
+		len = ft_strlen(av[1]);
+		while (len--)
+			write(1, &av[1][len], 1);
 	}
-	write(1, "\n", 1);
+	ft_putchar('\n');
 }

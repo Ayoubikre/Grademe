@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    auto_correc_program.sh                             :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+         #
+#    By: aldantas <aldantas@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/20 02:26:11 by jcluzet           #+#    #+#              #
-#    Updated: 2022/12/14 15:24:12 by jcluzet          ###   ########.fr        #
+#    Updated: 2025/02/09 19:41:31 by aldantas         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,7 +49,6 @@ do
         break
     fi
 done
-
 
 DIFF=$(diff sourcexam finalexam)
 if [ "$DIFF" != "" ]
